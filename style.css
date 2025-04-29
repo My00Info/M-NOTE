@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Fredericka+the+Great&display=swap');
+
 /* Réinitialisation et styles de base */
 * {
     margin: 0;
@@ -57,7 +59,7 @@ header {
 .logo_text {
     font-size: 1.8rem;
     color: var(--text-color);
-    font-family: 'Aguafina Script', cursive;
+    font-family: 'Agu Display', serif;
 }
 
 .logo_text span {
@@ -124,6 +126,7 @@ main {
 .menu {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 15px;
     background-color: var(--container-color);
     border-radius: 10px;
@@ -347,8 +350,8 @@ main {
 .color-picker {
     display: none;
     position: absolute;
-    top: 14px;
-    right: 48px;
+    top: 55px;
+    right: 10px;
     background: var(--container-color);
     border-radius: 8px;
     padding: 6px 10px;
