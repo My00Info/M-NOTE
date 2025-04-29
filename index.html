@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M!NOTE | Application de prise de notes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Nanum+Gothic+Coding:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo M!NOTE" class="logo_img">
+            <h1 class="logo_text">M!N<span>0</span>TE</h1>
+        </div>
+        <div class="search">
+            <div class="search_box">
+                <img src="img/search_icon_dark.svg" alt="Rechercher" class="search-icon">
+                <input type="text" class="search_input" placeholder="Rechercher des notes...">
+            </div>
+        </div>
+        <div class="user">
+            <h2 class="user_name">Utilisateur</h2>
+            <img src="img/user.png" alt="Profil utilisateur" class="user_img">
+        </div>
+    </header>
+
+    <main>
+        <nav class="menu">
+            <div class="menu_item" id="addNoteBtn">
+                <img src="img/add_note.svg" alt="Ajouter une note" class="add-icon">
+                <h1>Ajouter</h1>
+            </div>
+            <div class="menu_item" id="toggleThemeBtn">
+                <img src="img/dark_mode.svg" alt="Changer de thème" class="theme-icon">
+                <h1>Thème</h1>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="header_section">
+                <h1 class="header_title">Mes Notes</h1>
+                <div class="button_bar">
+                    <button class="arrow left-arrow" aria-label="Notes précédentes">
+                        <img src="img/arrow_left_icon.svg" alt="Flèche gauche" class="arrow_letf-icon">
+                    </button>
+                    <button class="arrow right-arrow" aria-label="Notes suivantes">
+                        <img src="img/arrow_right_icon.svg" alt="Flèche droite" class="arrow_right-icon">
+                    </button>
+                </div>
+            </div>
+
+            <section class="card-swipe-section">
+                <div class="swipe-container">
+                    <div class="card-track" id="cardTrack">
+                        <!-- Les notes seront insérées ici dynamiquement -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal pour ajouter/modifier des notes -->
+    <div class="modal" id="noteModal">
+        <div class="modal-content">
+            <h2 id="modalTitle">Ajouter une note</h2>
+            <input type="text" id="noteTitleInput" placeholder="Titre de la note" required>
+            <textarea id="noteTextInput" placeholder="Contenu de la note" required></textarea>
+            <div class="controls">
+                <div class="color-picker">
+                    <div class="color-option selected" style="background-color: #FFD54F;" data-color="#FFD54F"></div>
+                    <div class="color-option" style="background-color: #E57373;" data-color="#E57373"></div>
+                    <div class="color-option" style="background-color: #81C784;" data-color="#81C784"></div>
+                    <div class="color-option" style="background-color: #64B5F6;" data-color="#64B5F6"></div>
+                    <div class="color-option" style="background-color: #9575CD;" data-color="#9575CD"></div>
+                    <div class="color-option" style="background-color: #FF8A65;" data-color="#FF8A65"></div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="save-note" id="saveNoteBtn">Enregistrer</button>
+                <button class="cancel-note" id="cancelNoteBtn">Annuler</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
